@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 170" role="img" aria-labelledby="title desc">
+  <title id="title">Dauti Elektro Kabelverlegung</title>
+  <desc id="desc">Blauer Blitz neben dem Schriftzug Dauti Elektro Kabelverlegung</desc>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#0878E1" d="M92 2 12 101h53l-11 67 82-111H82z"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-weight="700">
+      <text x="142" y="70" fill="#082B52" font-size="70" letter-spacing="1">DAUTI</text>
+      <text x="145" y="120" fill="#0A5FA8" font-size="42" letter-spacing="8">ELEKTRO</text>
+      <text x="146" y="155" fill="#082B52" font-size="21" letter-spacing="6">KABELVERLEGUNG</text>
+    </g>
+  </g>
+</svg>
