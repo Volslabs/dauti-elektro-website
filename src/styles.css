@@ -208,7 +208,18 @@ p { color: var(--muted); }
 .contact-cards svg { color: var(--blue-600); }.contact-cards span { display: flex; flex-direction: column; min-width: 0; }.contact-cards small { color: var(--muted); }.contact-cards b { overflow-wrap: anywhere; }
 .verification-note { margin-top: 1rem; padding: .8rem; color: #6b5b28; background: #fff9e9; border-radius: var(--radius-sm); font-size: .8rem; }
 .legal .demo-badge { position: static; display: inline-block; margin-bottom: 1rem; background: #8a6811; }
-.legal h3 { margin-top: 2rem; }.legal a { color: var(--blue-600); text-decoration: underline; }
+.legal h2 { margin-top: 2.2rem; }
+.legal h2:first-of-type { margin-top: 0; }
+.legal h3 { margin-top: 2rem; }
+.legal p { max-width: 76ch; }
+.legal a { color: var(--blue-600); text-decoration: underline; }
+.legal-date { color: var(--muted); font-size: .82rem; font-weight: 700; }
+
+.partner-notice { display: flex; gap: .9rem; margin: 0 0 2rem; padding: 1rem 1.1rem; color: #17354d; background: #eef7ff; border: 1px solid #b9dcf7; border-left: 4px solid var(--blue-600); border-radius: var(--radius-sm); }
+.partner-notice > svg { flex: none; margin-top: .15rem; color: var(--blue-600); }
+.partner-notice strong { display: block; margin-bottom: .25rem; color: var(--blue-700); }
+.partner-notice p { margin: 0; font-size: .88rem; }
+.service-scope { display: block; margin: .2rem 0 .65rem; color: var(--blue-700); font-size: .7rem; font-weight: 800; }
 .not-found { min-height: 70vh; display: grid; place-items: center; padding: 2rem; text-align: center; }.not-found > div { max-width: 600px; }.not-found > div > svg { width: 64px; height: 64px; color: var(--blue-600); }
 
 .site-footer { padding-bottom: 72px; background: white; }
