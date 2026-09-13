@@ -18,6 +18,14 @@ const META = {
   '/datenschutz/': ['Datenschutz | Drilon Dauti Leitung und Kabelverlegung', 'Datenschutzhinweise von Drilon Dauti Leitung und Kabelverlegung.'],
 };
 
+const GOOGLE_PROFILE_URL = 'https://share.google/he1d4Sz7CjNJe1qq4';
+const GOOGLE_REVIEW_URL = 'https://search.google.com/local/writereview?placeid=ChIJwUyx7zOf_0IRvyDKavtny9E';
+const GOOGLE_REVIEWS = [
+  { author: 'Philipp Lindinger', date: 'vor 3 Monaten', quote: 'Perfekter Service und fachgerechte Beratung.' },
+  { author: 'Hamza Bakircioglu', date: 'vor 4 Monaten', quote: 'Alles lief zuverlässig, sauber und pünktlich ab.' },
+  { author: 'H H', date: 'vor 4 Monaten', quote: 'Nett, zuverlässig und nicht überteuert.' },
+];
+
 function Logo() {
   return <Link className="logo" to="/" aria-label="Dauti – Startseite"><img src={asset('dauti-logo.svg')} alt="Dauti Leitung und Kabelverlegung" width="530" height="170" /></Link>;
 }
@@ -129,7 +137,7 @@ function RegionGraphic() {
 }
 
 function ReviewRegionSection() {
-  return <section className="section review-region"><div className="container review-grid"><div><p className="eyebrow">Echte Meinungen. Echte Projekte.</p><h2>Das sagen unsere Kunden</h2><article className="review-card"><span className="demo-badge">Demo-Inhalt</span><div className="stars">★★★★★</div><p>Hier können nach Freigabe verifizierte Kundenstimmen oder eine echte Google-Bewertungsintegration erscheinen.</p><b>Platzhalter für Kundenbewertung</b></article><p className="demo-note">Es werden aktuell keine erfundenen Bewertungen als echt ausgegeben.</p></div><div><p className="eyebrow">Regional für Sie da.</p><h2>Unser Einsatzgebiet</h2><div className="region-inner"><div><h3>Ihr Ansprechpartner für Kempten und das Allgäu</h3><p>Wir sind in Kempten und in der gesamten Region Allgäu für Sie im Einsatz – schnell, zuverlässig und flexibel.</p><ul className="location-list">{locations.map(x => <li key={x}><CircleCheck />{x}</li>)}</ul></div><RegionGraphic /></div></div></div></section>;
+  return <section className="section review-region"><div className="container review-grid"><div className="reviews-panel"><p className="eyebrow">Echte Meinungen. Echte Projekte.</p><h2>Das sagen unsere Kunden</h2><div className="google-score"><div className="stars" aria-label="5 von 5 Sternen">★★★★★</div><strong>5,0</strong><span>bei 5 Google-Rezensionen</span></div><div className="google-review-list">{GOOGLE_REVIEWS.map(review => <article className="review-card" key={review.author}><div className="stars" aria-hidden="true">★★★★★</div><blockquote>„{review.quote}“</blockquote><div className="review-author"><strong>{review.author}</strong><span>Google · {review.date}</span></div></article>)}</div><div className="google-review-actions"><a className="button button-primary" href={GOOGLE_PROFILE_URL} target="_blank" rel="noreferrer">Bewertungen ansehen <ArrowRight size={17} /></a><a className="button button-google-outline" href={GOOGLE_REVIEW_URL} target="_blank" rel="noreferrer">Bewertung abgeben <ArrowRight size={17} /></a></div><p className="review-source">Quelle: Google · Google überprüft Rezensionen nicht vorab · Stand September 2026</p></div><div><p className="eyebrow">Regional für Sie da.</p><h2>Unser Einsatzgebiet</h2><div className="region-inner"><div><h3>Ihr Ansprechpartner für Kempten und das Allgäu</h3><p>Wir sind in Kempten und in der gesamten Region Allgäu für Sie im Einsatz – schnell, zuverlässig und flexibel.</p><ul className="location-list">{locations.map(x => <li key={x}><CircleCheck />{x}</li>)}</ul></div><RegionGraphic /></div></div></div></section>;
 }
 
 function ContactForm({ compact = false }) {
@@ -239,11 +247,13 @@ function PrivacyContent() {
     <p>Die Formulare auf dieser Website versenden keine Daten an einen eigenen Webserver. Beim Absenden wird auf Ihrem Gerät ein vorausgefüllter E-Mail-Entwurf geöffnet. Ausgewählte Dateien werden dabei nicht automatisch angehängt.</p>
     <h2>4. WhatsApp</h2>
     <p>Eine Verbindung zu WhatsApp wird erst hergestellt, wenn Sie einen WhatsApp-Link anklicken. Dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters; es kann zu einer Verarbeitung von Daten außerhalb der Europäischen Union kommen. Nutzen Sie alternativ Telefon oder E-Mail, wenn Sie WhatsApp nicht verwenden möchten.</p>
-    <h2>5. Cookies und Analyse</h2>
+    <h2>5. Google-Bewertungen</h2>
+    <p>Auf der Startseite werden ausgewählte, öffentlich sichtbare Google-Bewertungen als statische Textauszüge angezeigt. Beim bloßen Aufruf der Website wird keine Verbindung zu Google hergestellt. Erst wenn Sie „Bewertungen ansehen“ oder „Bewertung abgeben“ anklicken, verlassen Sie diese Website und es gelten die Datenschutzbestimmungen von Google.</p>
+    <h2>6. Cookies und Analyse</h2>
     <p>Diese Website setzt derzeit keine eigenen Analyse- oder Marketingdienste und keine nicht technisch erforderlichen Cookies ein.</p>
-    <h2>6. Speicherdauer</h2>
+    <h2>7. Speicherdauer</h2>
     <p>Kontaktdaten werden nur so lange gespeichert, wie dies zur Bearbeitung der Anfrage, zur Durchführung eines Vertrags oder aufgrund gesetzlicher Aufbewahrungspflichten erforderlich ist. Danach werden sie gelöscht, sofern keine berechtigten Gründe für eine weitere Speicherung bestehen.</p>
-    <h2>7. Ihre Rechte</h2>
+    <h2>8. Ihre Rechte</h2>
     <p>Sie haben nach Maßgabe der DSGVO insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Außerdem können Sie eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</p>
     <p>Sie haben zudem das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Für nichtöffentliche Stellen in Bayern ist regelmäßig das <a href="https://www.lda.bayern.de/" target="_blank" rel="noreferrer">Bayerische Landesamt für Datenschutzaufsicht</a> zuständig.</p>
   </>;

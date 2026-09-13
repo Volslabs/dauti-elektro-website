@@ -144,10 +144,21 @@ p { color: var(--muted); }
 .step-arrow { position: absolute; bottom: -1.2rem; left: 50%; color: var(--blue-500); transform: rotate(90deg); }
 
 .review-grid { display: grid; gap: 3rem; }
-.review-card { position: relative; margin-top: 1.2rem; padding: 2.6rem 1.4rem 1.4rem; background: white; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
-.review-card .demo-badge { top: .75rem; background: #876813; }
+.reviews-panel { min-width: 0; }
+.google-score { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .7rem; margin-top: 1rem; }
+.google-score strong { color: var(--blue-800); font-size: 1.35rem; }
+.google-score span { color: var(--muted); font-size: .82rem; }
+.google-review-list { display: grid; gap: .75rem; margin-top: 1rem; }
+.review-card { padding: 1rem 1.1rem; background: white; border: 1px solid rgba(13,111,202,.13); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
 .stars { color: #f4b400; letter-spacing: .14em; }
-.review-card p { margin-block: .6rem; font-size: .92rem; }
+.review-card blockquote { margin: .45rem 0 .7rem; color: var(--blue-900); font-size: .92rem; font-weight: 650; line-height: 1.55; }
+.review-author { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem .8rem; font-size: .76rem; }
+.review-author span, .review-source { color: var(--muted); }
+.google-review-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+.google-review-actions .button { min-height: 43px; padding: .65rem .85rem; font-size: .78rem; }
+.button-google-outline { color: var(--blue-700); background: white; border-color: #8bb9df; box-shadow: none; }
+.button-google-outline:hover { color: white; background: var(--blue-700); border-color: var(--blue-700); }
+.review-source { margin: .65rem 0 0; font-size: .7rem; }
 .region-inner { display: grid; gap: 1.2rem; }
 .region-inner h3 { color: var(--blue-700); font-size: 1.45rem; }
 .location-list { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem 1rem; margin: 1rem 0 0; padding: 0; list-style: none; }
