@@ -2,6 +2,19 @@
 
 Responsive React/Vite-Website nach dem gelieferten Mockup. Die Anwendung enthält die Startseite, sechs Leistungsdetailseiten, Projekte, Über uns, Kontakt, Impressum und Datenschutz.
 
+## Projekt später aus GitHub wiederherstellen
+
+Das Repository enthält den vollständigen bearbeitbaren Quellcode, alle verwendeten Bilddateien und die GitHub-Pages-Konfiguration. Der Ordner `dist/` wird nicht gespeichert, weil er bei jedem Build automatisch neu erzeugt wird.
+
+```powershell
+git clone https://github.com/Volslabs/dauti-elektro-website.git
+Set-Location dauti-elektro-website
+npm ci
+npm run dev
+```
+
+Für einen reproduzierbaren Produktions-Build wird Node.js 24 verwendet, genau wie im GitHub-Actions-Workflow.
+
 ## Lokal starten
 
 ```powershell
